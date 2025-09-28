@@ -1,0 +1,2 @@
+# My Programming Foundamentals Training
+welcome to my foundamental workshop repo, this a personal repo to train and improve myself on foundamental skills related to programming like data structure, algorithm, sorting, searching and more.
