@@ -2,90 +2,88 @@
 welcome to my foundamental workshop repo, this a personal repo to train and improve myself on foundamental skills related to programming like data structure, algorithm, sorting, searching and more.
 
 ## Roadmap
-```
-fundamental/
-├── 01-data-structures/
-│   ├── arrays/
-│   ├── linked-lists/
-│   ├── stacks/
-│   ├── queues/
-│   ├── hash-tables/
-│   ├── trees/
-│   │   ├── binary-trees/
-│   │   ├── bst/
-│   │   ├── avl-trees/
-│   │   └── heap/
-│   ├── graphs/
-│   └── tries/
-├── 02-sorting-algorithms/
-│   ├── comparison-sorts/
-│   │   ├── bubble-sort/
-│   │   ├── selection-sort/
-│   │   ├── insertion-sort/
-│   │   ├── merge-sort/
-│   │   ├── quick-sort/
-│   │   └── heap-sort/
-│   └── non-comparison-sorts/
-│       ├── counting-sort/
-│       ├── radix-sort/
-│       └── bucket-sort/
-├── 03-searching-algorithms/
-│   ├── linear-search/
-│   ├── binary-search/
-│   ├── depth-first-search/
-│   ├── breadth-first-search/
-│   └── interpolation-search/
-├── 04-array-techniques/
-│   ├── two-pointers/
-│   ├── sliding-window/
-│   ├── prefix-sum/
-│   ├── kadanes-algorithm/
-│   └── dutch-national-flag/
-├── 05-recursion-backtracking/
-│   ├── basic-recursion/
-│   ├── divide-conquer/
-│   ├── permutation-combination/
-│   ├── subsets/
-│   └── maze-problems/
-├── 06-dynamic-programming/
-│   ├── memoization/
-│   ├── tabulation/
-│   ├── 1d-dp/
-│   ├── 2d-dp/
-│   ├── knapsack/
-│   ├── lcs/
-│   └── edit-distance/
-├── 07-graph-algorithms/
-│   ├── traversal/
-│   │   ├── dfs/
-│   │   └── bfs/
-│   ├── shortest-path/
-│   │   ├── dijkstra/
-│   │   ├── bellman-ford/
-│   │   └── floyd-warshall/
-│   ├── minimum-spanning-tree/
-│   │   ├── prims/
-│   │   └── kruskals/
-│   └── topological-sort/
-├── 08-string-algorithms/
-│   ├── pattern-matching/
-│   │   ├── naive/
-│   │   ├── kmp/
-│   │   └── rabin-karp/
-│   ├── palindrome/
-│   ├── anagram/
-│   └── string-manipulation/
-├── 09-mathematical-algorithms/
-│   ├── prime-numbers/
-│   ├── gcd-lcm/
-│   ├── modular-arithmetic/
-│   ├── bit-manipulation/
-│   └── combinatorics/
-├── 10-miscellaneous/
-│   ├── greedy-algorithms/
-│   ├── interval-problems/
-│   ├── monotonic-stack/
-│   ├── union-find/
-│   └── reservoir-sampling/
-└── README.md
-```
+- fundamental/
+  - 01-data-structures/
+    - arrays/
+    - linked-lists/
+    - stacks/
+    - queues/
+    - hash-tables/
+    - trees/
+      - binary-trees/
+      - bst/
+      - avl-trees/
+      - heap/
+    - graphs/
+    - tries/
+  - 02-sorting-algorithms/
+    - comparison-sorts/
+      - bubble-sort/
+      - selection-sort/
+      - insertion-sort/
+      - merge-sort/
+      - quick-sort/
+      - heap-sort/
+    - non-comparison-sorts/
+      - counting-sort/
+      - radix-sort/
+      - bucket-sort/
+  - 03-searching-algorithms/
+    - linear-search/
+    - binary-search/
+    - depth-first-search/
+    - breadth-first-search/
+    - interpolation-search/
+  - 04-array-techniques/
+    - two-pointers/
+    - sliding-window/
+    - prefix-sum/
+    - kadanes-algorithm/
+    - dutch-national-flag/
+  - 05-recursion-backtracking/
+    - basic-recursion/
+    - divide-conquer/
+    - permutation-combination/
+    - subsets/
+    - maze-problems/
+  - 06-dynamic-programming/
+    - memoization/
+    - tabulation/
+    - 1d-dp/
+    - 2d-dp/
+    - knapsack/
+    - lcs/
+    - edit-distance/
+  - 07-graph-algorithms/
+    - traversal/
+      - dfs/
+      - bfs/
+    - shortest-path/
+      - dijkstra/
+      - bellman-ford/
+      - floyd-warshall/
+    - minimum-spanning-tree/
+      - prims/
+      - kruskals/
+    - topological-sort/
+  - 08-string-algorithms/
+    - pattern-matching/
+      - naive/
+      - kmp/
+      - rabin-karp/
+    - palindrome/
+    - anagram/
+    - string-manipulation/
+  - 09-mathematical-algorithms/
+    - prime-numbers/
+    - gcd-lcm/
+    - modular-arithmetic/
+    - bit-manipulation/
+    - combinatorics/
+  - 10-miscellaneous/
+    - greedy-algorithms/
+    - interval-problems/
+    - monotonic-stack/
+    - union-find/
+    - reservoir-sampling/
+  - README.md
