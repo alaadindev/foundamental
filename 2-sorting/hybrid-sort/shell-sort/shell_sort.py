@@ -39,14 +39,12 @@ def shell_sort(arr):
             j = i
             # shift elements to the right if they are bigger then our temp and we having reach our first gap squence
             while j >= gap and arr[j-gap] > temp:  
-                arr[i] = arr[j-gap] # shift left item (j-gap) to the right (j)
+                arr[j] = arr[j-gap] # shift left item (j-gap) to the right (j)
                 j-= gap # move on to the prevous gap squence
             arr[j] = temp # insert our item to j which index is the last one shifted
         gap = gap//2 #reduce our gap by half
-
-    
     return arr
-print(shell_sort([3,2,0,1,5,4,8,3,4,6,1,7,4,9]))
+print(shell_sort([]))
 #print(messy_shell_sort([3,2,0,1,5,4,8,3,4,6,1,7,4,9]))
 
 #print(odd_shell_sort([3,2,6,1,7,4,9]))
