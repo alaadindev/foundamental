@@ -12,11 +12,11 @@ def odd_shell_sort(arr):
 
 #still different then the standard but shell sort this time
 def shell_sort(arr):
-    n = len(arr)
-    gap = n//2
-    while gap > 0:
-        for i in range(gap):
-            for j in range(i+gap, n, gap):
+    n = len(arr) #get the len
+    gap = n//2 #set the gap to half of the arr
+    while gap > 0: #keep looping until gap is 1 switch to classical insertion
+        for i in range(gap): #loop from 0 to gap with i
+            for j in range(i+gap, n, gap): #loop from i+gap to end of arr 1 gap step at a time with j 
                 temp = arr[j]
                 last_pos = j
                 for k in range(j-gap, -1, -gap):
