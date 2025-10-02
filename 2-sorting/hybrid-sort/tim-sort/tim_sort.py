@@ -70,10 +70,10 @@ def tim_sort(arr):
     return arr
 """
 def insertion_sort(arr, left, right):
-    for i in range(left, right):
+    for i in range(left+1, right+1):
         insert_value = arr[i]
         j=i-1
-        while j >= 0 and arr[j] > insert_value:
+        while j >= left and arr[j] > insert_value:
             arr[j+1] = arr[j]
             j-=1
         arr[j+1] = insert_value
@@ -103,8 +103,16 @@ def merge(arr, left, mid, right):
     return arr
 
 
+def tim_sort(arr):
+    n = len(arr)
+    run = 4
+
+    for i in range(0, n, run):
+        insertion_sort(arr, i, min(i + run-1, n-1) )
+
+    return arr
 
 
-
-print(insertion_sort([1,4,2,0,4,7,3,9], 1, 8))
-print(merge([1,3,5,2,4,6], 0, 2, 5))
+#print(insertion_sort([1,4,2,0,4,7,3,9], 1, 8))
+#print(merge([1,3,5,2,4,6], 0, 2, 5))
+print(tim_sort([1,4,2,0,4,7,3,9]))
