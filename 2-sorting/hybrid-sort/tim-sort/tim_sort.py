@@ -1,3 +1,6 @@
+import random 
+big_random_arr = [random.randint(0, 1000) for _ in range(0, 1000)]
+"""
 def insertion_sort(arr, left, right):
     for i in range(left + 1, right + 1): # loop over index from above left until right
         value = arr[i] #get the current value of i index to be inserted
@@ -6,7 +9,7 @@ def insertion_sort(arr, left, right):
             arr[j + 1] = arr[j] # shift the current value to the right
             j -= 1 # reduce j by 1
         arr[j + 1] = value # j have the last index where the insertion need to go
-
+    print("insertion")
 
 def merge(arr, left, mid, right):
     left_part = arr[left:mid + 1] # get subarr from left to mid(including)
@@ -33,7 +36,7 @@ def merge(arr, left, mid, right):
         arr[k] = right_part[j] # assign current right value subarr to the original arr from the left side k
         j += 1 # increase our right subarr current index
         k += 1 # increase our original current arr index
-
+    print("merge")
 
 def calc_min_run(n):
     run = 0
@@ -65,7 +68,43 @@ def tim_sort(arr):
 
         size *= 2 # double our size each time
     return arr
+"""
+def insertion_sort(arr, left, right):
+    for i in range(left, right):
+        insert_value = arr[i]
+        j=i-1
+        while j >= 0 and arr[j] > insert_value:
+            arr[j+1] = arr[j]
+            j-=1
+        arr[j+1] = insert_value
+    return arr
+
+def merge(arr, left, mid, right):
+    left_arr = arr[left: mid+1]
+    right_arr = arr[mid+1: right+1]
+    i=j=0
+    k=left
+    while i < len(left_arr) and j < len(right_arr):
+        if left_arr[i] < right_arr[j]:
+            arr[k] = left_arr[i]
+            i+=1
+        else:
+            arr[k] = right_arr[j]
+            j+=1
+        k+=1
+    while i < len(left_arr):
+        arr[k] = left_arr[i]
+        i+=1
+        k+=1
+    while j< len(right_arr):
+        arr[k] = right_arr[j]
+        j+=1
+        k+=1
+    return arr
 
 
 
-print(tim_sort([3,1,5,2,6,4,9,6,7,0]))
+
+
+print(insertion_sort([1,4,2,0,4,7,3,9], 1, 8))
+print(merge([1,3,5,2,4,6], 0, 2, 5))
