@@ -109,10 +109,17 @@ def tim_sort(arr):
 
     for i in range(0, n, run):
         insertion_sort(arr, i, min(i + run-1, n-1) )
-
+    size = run
+    while size < n:
+        for left in range(0, n, 2*size):
+            mid = min(left + size -1, n-1)
+            right = min(mid + size, n-1)
+            if mid < right:
+                merge(arr, left, mid, right)
+        size *=2
     return arr
 
 
 #print(insertion_sort([1,4,2,0,4,7,3,9], 1, 8))
 #print(merge([1,3,5,2,4,6], 0, 2, 5))
-print(tim_sort([1,4,2,0,4,7,3,9]))
+print(tim_sort([4, 1, 7, 3, 0, 2, 9, 5]))
