@@ -116,8 +116,13 @@ def tim_sort(arr):
     while i < n:
         run_start = i
         run_end = i
-        while run_end + 1 < n and arr[run_end] <= arr[run_end + 1]:
-            run_end += 1
+        if run_end + 1 < n and arr[run_end] <= arr[run_end + 1]:
+            while run_end + 1 < n and arr[run_end] <= arr[run_end + 1]:
+                run_end += 1
+        else:
+            while run_end + 1< n and arr[run_end] > arr[run_end+1]:
+                run_end += 1 
+            arr[run_start:run_end + 1] = arr[run_start:run_end+ 1][::-1] # [start, stop, step] basically reverse the order
         run_len = run_end - run_start + 1
         if run_len < min_run:
             run_end = min(run_start +min_run -1, n -1)
