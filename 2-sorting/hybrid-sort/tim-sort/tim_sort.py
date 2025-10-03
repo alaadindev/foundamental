@@ -102,25 +102,33 @@ def merge(arr, left, mid, right):
         k+=1
     return arr
 
-def min_run(n):
-    run = 0
+def calc_min_run(n):
+    r = 0
     while n >= 64:
-        if n % 2 == 1:
-            run = 1
+        r |=n & 1 #if n was 1 at any time remember 1 |= 0 will be 1 and n&1 only take the last bit even or odd
         n >>= 1
-    return n + run
+    return n + r
 
 def tim_sort(arr):
     n = len(arr)
-    run = min_run(n)
+    min_run = calc_min_run(n)
+    i = 0
+    while i < n:
+        run_start = i
+        run_end = i
+        while run_end + 1 < n and arr[run_end] <= arr[run_end + 1]:
+            run_end += 1
+        run_len = run_end - run_start + 1
+        if run_len < min_run:
+            run_end = min(run_start +min_run -1, n -1)
+        insertion_sort(arr, run_start, run_end)
+        i = run_end + 1
 
-    for i in range(0, n, run):
-        insertion_sort(arr, i, min(i + run-1, n-1) )
-    size = run
+    size = min_run
     while size < n:
         for left in range(0, n, 2*size):
             mid = min(left + size -1, n-1)
-            right = min(mid + size, n-1)
+            right = min(left + 2*size -1, n-1)
             if mid < right:
                 merge(arr, left, mid, right)
         size *=2
