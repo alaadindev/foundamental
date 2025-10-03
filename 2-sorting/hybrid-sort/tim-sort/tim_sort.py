@@ -102,10 +102,17 @@ def merge(arr, left, mid, right):
         k+=1
     return arr
 
+def min_run(n):
+    run = 0
+    while n >= 64:
+        if n % 2 == 1:
+            run = 1
+        n >>= 1
+    return n + run
 
 def tim_sort(arr):
     n = len(arr)
-    run = 4
+    run = min_run(n)
 
     for i in range(0, n, run):
         insertion_sort(arr, i, min(i + run-1, n-1) )
@@ -122,4 +129,5 @@ def tim_sort(arr):
 
 #print(insertion_sort([1,4,2,0,4,7,3,9], 1, 8))
 #print(merge([1,3,5,2,4,6], 0, 2, 5))
-print(tim_sort([4, 1, 7, 3, 0, 2, 9, 5]))
+#print(tim_sort([4, 1, 7, 3, 0, 2, 9, 5]))
+print(tim_sort(big_random_arr))
