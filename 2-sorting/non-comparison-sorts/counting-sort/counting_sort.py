@@ -3,7 +3,7 @@ def counting_sort(arr):
     count = [0]*(count_range+1)
     print(arr)
     for j in range(len(arr)):
-        count[arr[j]] +=1
+        count[arr[j]-min(arr)] +=1
     acc = 0
     print(count)
     for i in range(count_range):
@@ -16,12 +16,12 @@ def counting_sort(arr):
     print(count)
     newarr =[0] * len(arr)
     for i in range(len(newarr)):
-        newarr[count[arr[i]]] = arr[i]
-        count[arr[i]] += 1
+        newarr[count[arr[i]-min(arr)]] = arr[i]
+        count[arr[i]-min(arr)] += 1
     print(count)
 
     return newarr
 
 
 
-print(counting_sort([1,0,3,1,3,1]))
+print(counting_sort([1,2,3,1,3,1]))
