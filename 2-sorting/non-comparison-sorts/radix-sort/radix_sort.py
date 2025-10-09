@@ -5,9 +5,9 @@ def radix_sort(arr):
     right = 10
     pos = 1
     maxnum = max(arr)
-    maxpos = 1 if maxnum == 0 else math.floor(math.log10(maxnum))+1
-    extract_digit = lambda x: (x//pos)%right 
-    while pos <= 10**maxpos: 
+    exp = 1
+    extract_digit = lambda x: (x//exp)%right 
+    while maxnum // exp > 0: 
         counts = [0]*10
         axarr = [0]*arrlen
         for i in range(arrlen):
@@ -26,7 +26,7 @@ def radix_sort(arr):
             counts[extract_digit(arr[i])] += 1
         print(counts)
         arr = axarr.copy()
-        pos *= 10
+        exp *= 10
     return axarr
 
 print(radix_sort([14,23,1,19,0,33,26,43,15]))
