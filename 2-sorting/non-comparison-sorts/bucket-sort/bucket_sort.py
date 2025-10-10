@@ -4,11 +4,13 @@ def bucket_sort(arr):
     arrlen = len(arr)
     axarr = [[] for _ in range(6)] 
     for i in range(arrlen):
-        print(bucketN(arr[i]))
         axarr[bucketN(arr[i])].append(arr[i])
     for i in range(len(axarr)):
         insertion_sort(axarr[i])
-    return axarr
+    flat = []
+    for subarr in axarr:
+        flat.extend(subarr)
+    return flat
 
 def insertion_sort(arr):
     for i in range(1,len(arr)):
@@ -19,5 +21,4 @@ def insertion_sort(arr):
     return arr
 
 
-print(insertion_sort([5,1,3,7,2,9,0]))
 print(bucket_sort([2,21,5,100,4,50]))
