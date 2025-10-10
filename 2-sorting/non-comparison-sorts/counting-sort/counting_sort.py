@@ -28,7 +28,6 @@ def counting_sort(arr):
     for i in range(len(newarr)):
         newarr[count[arr[i]-offset]] = arr[i]
         count[arr[i]-offset] += 1
-    print(count)
 
     return newarr
 
