@@ -2,12 +2,12 @@ def bucket_sort(arr):
     normalized = lambda num: num/(max(arr)+1)
     bucketN = lambda num: int(6*normalized(num))
     arrlen = len(arr)
-    axarr = [[] for _ in range(6)] 
+    axarr = [[] for _ in range(6)] #[[]]*9 result in subarray being copy of each other which is a bug 
     for i in range(arrlen):
         axarr[bucketN(arr[i])].append(arr[i])
     for i in range(len(axarr)):
         insertion_sort(axarr[i])
-    flat = []
+    flat = [] #flatten the array into 1 N
     for subarr in axarr:
         flat.extend(subarr)
     return flat
